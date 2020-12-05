@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="index.css">
+    <title>Cartoon Avatars</title>
+</head>
+<body>
+
+    <div class="container app">
+        <h1 class="text-center text-success">Get Your Avatar</h1>
+        <div class="main-div">
+            <div class="details">
+                <label>Put your name</label>
+                <input type="text" name="" id="nameid"/>
+            </div>
+            <div class="img-div">
+                <img src="img.png" alt="Blank Frame" id="change">
+            </div>
+
+            <button class="btn btn-success form-control my-2">Get</button>
+            
+
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const name=$('#nameid').val();
+            $('#change').attr('src',`https://joeschmoe.io/api/v1/
+${name}`)
+        })
+
+       
+    })
+</script>
+    
+</body>
+</html>
